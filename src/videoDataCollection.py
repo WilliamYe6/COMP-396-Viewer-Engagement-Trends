@@ -30,7 +30,7 @@ def main():
         fieldnames = ['Video ID', 'Title', 'Channel', 'Channel Subscribers', 'View Count', 'Likes', 'Dislikes', 'Comments', 'Comment Count', 'Published Date', 'Duration', 'Category']
         writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
         writer.writeheader()
-
+    
         #for every video id inside video_id_list
         for video_id in video_id_list:
             request = youtube.videos().list(
